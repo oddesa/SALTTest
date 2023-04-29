@@ -34,7 +34,7 @@ final class HomeViewModel {
                     self.users.append(contentsOf: users)
                     self.onFinishGetUsers?(nil)
                     if self.currentPage == 2 {
-                        getUsers()
+                        self.getUsers()
                     }
                 } catch {
                     self.onFinishGetUsers?(error.localizedDescription)

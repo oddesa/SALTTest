@@ -117,7 +117,7 @@ class UsersTableViewCell: UITableViewCell {
         loadingView.stopAnimating()
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {return}
-            avatarImageView.layer.cornerRadius = avatarImageView.frame.width/2
+            self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.width/2
         }
         
         avatarImageView.setImageWithPlaceholder(url: URL(string: data.avatar ?? "NoAvatar"),
